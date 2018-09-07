@@ -219,7 +219,7 @@ begin
 				post <= 0;
 			elsif (contar = 0  and ibm_code(8 downto 1) /= X"F0" and post = 0)then -- First time, it sends the letter to LCD
 				
-				if (lineas <= 15 or (lineas >= 40 and lineas < 66-9-1)) then
+				if (lineas <= 15 or (lineas >= 40 and lineas < 66-9)) then
 					if (i = 10) then
 						rs <= '1';
 						rw <= '0';
@@ -237,7 +237,7 @@ begin
 					contar := contar + 1;
 					estado <= listo;
 					lineas := lineas + 1;
-				elsif (lineas >= 66 - 9 - 1) then
+				elsif (lineas >= 66 - 9) then
 					rs <= '1';
 					rw <= '0';
 					enviar <= '1';
