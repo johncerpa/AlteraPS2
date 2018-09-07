@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "firstDigit_display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "firstDigit_display[6]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "secondDigit_display[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "enviar",
+					"strict" : false
+				},
+				{
+					"name" : "rs",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clock",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

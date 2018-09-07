@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 06 18:14:07 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Workshop
+Top-level Entity Name : Workshop
+Family : Cyclone IV E
+Total logic elements : 2,124
+    Total combinational functions : 2,121
+    Dedicated logic registers : 135
+Total registers : 135
+Total pins : 39
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

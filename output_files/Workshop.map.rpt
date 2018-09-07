@@ -1,0 +1,427 @@
+Analysis & Synthesis report for Workshop
+Thu Sep 06 18:14:07 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Workshop|estado
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Sep 06 18:14:07 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Workshop                                    ;
+; Top-level Entity Name              ; Workshop                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 2,124                                       ;
+;     Total combinational functions  ; 2,121                                       ;
+;     Dedicated logic registers      ; 135                                         ;
+; Total registers                    ; 135                                         ;
+; Total pins                         ; 39                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Workshop           ; Workshop           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; Workshop.vhd                     ; yes             ; User VHDL File               ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd           ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                                                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                   ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                        ;         ;
+; db/lpm_divide_cqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/lpm_divide_cqo.tdf  ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/abs_divider_4dg.tdf ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/alt_u_div_6af.tdf   ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/add_sub_7pc.tdf     ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/add_sub_8pc.tdf     ;         ;
+; db/lpm_abs_i0a.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/lpm_abs_i0a.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 2,124   ;
+;                                             ;         ;
+; Total combinational functions               ; 2121    ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 769     ;
+;     -- 3 input functions                    ; 587     ;
+;     -- <=2 input functions                  ; 765     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 1413    ;
+;     -- arithmetic mode                      ; 708     ;
+;                                             ;         ;
+; Total registers                             ; 135     ;
+;     -- Dedicated logic registers            ; 135     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 39      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; Add2~62 ;
+; Maximum fan-out                             ; 125     ;
+; Total fan-out                               ; 6783    ;
+; Average fan-out                             ; 2.91    ;
++---------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |Workshop                             ; 2121 (400)          ; 135 (135)                 ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |Workshop                                                                                              ; Workshop        ; work         ;
+;    |lpm_divide:Mod0|                  ; 1721 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Workshop|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;       |lpm_divide_cqo:auto_generated| ; 1721 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Workshop|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                ; lpm_divide_cqo  ; work         ;
+;          |abs_divider_4dg:divider|    ; 1721 (64)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Workshop|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;             |alt_u_div_6af:divider|   ; 1595 (1595)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Workshop|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider  ; alt_u_div_6af   ; work         ;
+;             |lpm_abs_i0a:my_abs_num|  ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Workshop|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num ; lpm_abs_i0a     ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Workshop|estado                                                                                                                                    ;
++------------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+; Name                   ; estado.fin ; estado.listo ; estado.configcursor ; estado.limpiardisplay ; estado.encenderdisplay ; estado.configpantalla ; estado.encender ;
++------------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+; estado.encender        ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 0               ;
+; estado.configpantalla  ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 1                     ; 1               ;
+; estado.encenderdisplay ; 0          ; 0            ; 0                   ; 0                     ; 1                      ; 0                     ; 1               ;
+; estado.limpiardisplay  ; 0          ; 0            ; 0                   ; 1                     ; 0                      ; 0                     ; 1               ;
+; estado.configcursor    ; 0          ; 0            ; 1                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.listo           ; 0          ; 1            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.fin             ; 1          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
++------------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; post[1..9,11..31]                      ; Merged with post[10]                   ;
+; post[10]                               ; Stuck at GND due to stuck port data_in ;
+; rw~reg0                                ; Stuck at GND due to stuck port data_in ;
+; lcd[7]~reg0                            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 33 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; post[10]      ; Stuck at GND              ; rw~reg0, lcd[7]~reg0                   ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 135   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 112   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Workshop|\comb_logic:lineas[19] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Workshop|lcd[4]~reg0            ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Workshop|rw~reg0                ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |Workshop|\comb_logic:contar[27] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 32             ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 39                          ;
+; cycloneiii_ff         ; 135                         ;
+;     ENA               ; 78                          ;
+;     ENA SCLR          ; 32                          ;
+;     ENA SLD           ; 2                           ;
+;     plain             ; 23                          ;
+; cycloneiii_lcell_comb ; 2122                        ;
+;     arith             ; 708                         ;
+;         2 data inputs ; 153                         ;
+;         3 data inputs ; 555                         ;
+;     normal            ; 1414                        ;
+;         0 data inputs ; 31                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 578                         ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 769                         ;
+;                       ;                             ;
+; Max LUT depth         ; 128.60                      ;
+; Average LUT depth     ; 104.28                      ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Sep 06 18:13:41 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Workshop -c Workshop
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file workshop.vhd
+    Info (12022): Found design unit 1: Workshop-FSM File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 27
+    Info (12023): Found entity 1: Workshop File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 5
+Info (12127): Elaborating entity "Workshop" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Workshop.vhd(12): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+Warning (10492): VHDL Process Statement warning at Workshop.vhd(271): signal "i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 271
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 275
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 275
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 275
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cqo.tdf
+    Info (12023): Found entity 1: lpm_divide_cqo File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/lpm_divide_cqo.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/abs_divider_4dg.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/alt_u_div_6af.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/add_sub_8pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_i0a.tdf
+    Info (12023): Found entity 1: lpm_abs_i0a File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/db/lpm_abs_i0a.tdf Line: 24
+Info (13014): Ignored 31 buffer(s)
+    Info (13016): Ignored 31 CARRY_SUM buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output[0]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[1]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[2]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[3]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[4]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[5]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[6]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[7]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[8]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[9]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "output[10]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 12
+    Warning (13410): Pin "lcd[7]" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 139
+    Warning (13410): Pin "rw" is stuck at GND File: C:/Users/Laboratorio/Downloads/AlteraPS2Keyboard-master-20180906T190950Z-001/AlteraPS2Keyboard-master/Workshop.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2163 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 2124 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 748 megabytes
+    Info: Processing ended: Thu Sep 06 18:14:07 2018
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:53
+
+

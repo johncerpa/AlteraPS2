@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+--------------------------------------------------
+entity Workshop is
+port(	
+	ps2_data: in std_logic;
+	ps2_clock: in std_logic;
+	reset: in std_logic;
+	led_data: out std_logic;
+	output: out std_logic_vector(10 downto 0)
+);
+end Workshop;
+--------------------------------------------------
+
+architecture arch of Workshop is
+	signal i: integer := 0;
+
+	begin
+	
+	initial_process: process(ps2_clock)
+	begin
+	
+		-- El reloj esta en 1 cuando no se presiona ninguna tecla
+		-- Cuando se suelta una tecla el reloj conmuta
+		
+		if (ps2_clock'event and ps2_clock = '0') then
+		
+		
+		
+			if (i < 11) then
+				
+				output(i) <= ps2_data;
+				led_data <= ps2_data;
+				i <= i + 1;
+				
+			end if;
+			
+			if (i >= 11) then
+				--i <= 0;				
+			end if;
+		
+		end if;
+		
+	end process;
+	
+
+end arch;

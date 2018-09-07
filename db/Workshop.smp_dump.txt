@@ -1,0 +1,10 @@
+
+State Machine - |Workshop|estado
+Name estado.fin estado.listo estado.configcursor estado.limpiardisplay estado.encenderdisplay estado.configpantalla estado.encender 
+estado.encender 0 0 0 0 0 0 0 
+estado.configpantalla 0 0 0 0 0 1 1 
+estado.encenderdisplay 0 0 0 0 1 0 1 
+estado.limpiardisplay 0 0 0 1 0 0 1 
+estado.configcursor 0 0 1 0 0 0 1 
+estado.listo 0 1 0 0 0 0 1 
+estado.fin 1 0 0 0 0 0 1 
