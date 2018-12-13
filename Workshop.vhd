@@ -15,7 +15,7 @@ port(
 	firstDigit_display: out std_logic_vector(6 downto 0);
 	secondDigit_display: out std_logic_vector(6 downto 0);
 
-	clk:		in std_logic;    --Clock to keep trak of time
+	clk:		in std_logic;    --Clock to keep track of time
 	lcd:		out std_logic_vector(7 downto 0);  --LCD data pins
 	enviar : out std_logic;    --Send signal (Enable)
 	rs:		out std_logic;    --Data or command
